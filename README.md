@@ -44,23 +44,28 @@ of research, infrastructure, data collection and analysis.
 --> 
 [---Network Measurement and Analysis]: # (---------------------------------------------)
 ### Network Measurement and Analysis
+@@kc -- elena suggests that we move all the "stand alone" research/publications to MSRI sections. and leave here all other funding AVOID, Cloud Bottleneck , QUINCE, STARNOVA, RABBITS
 
 #### Expanding BGP Data Horizons
+@@move to BGP section of MSRI + GILL
 Rapid Internet growth challenges data collection for interdomain routing analysis. To address this challeng we worked with UCLouvain (Belgium) researchers on the reconceptualization of the public BGP data collection architectures, introducing an overshoot-and-discard strategy. This approach accommodates a significant increase in vantage points, by discarding redundant data shortly after its collection. We evaluated the method's effectiveness in detecting two important phenomena using BGP data: AS-topology mapping and hijacks. Our approach, applicable to various Internet data types, introduces a promising avenue for future Internet measurement research. ([Internet Science Moonshot: Expanding BGP Data Horizons](https://catalog.caida.org/details/paper/2023_internet_science_moonshot/), ACM)
 
 #### Investigating Irregularities in the Internet Routing Registry
+@@move to MSRI
 {{< figure src="/about/annualreports/2023/images/2023_irregularities_in_internet_routing_registry.png" width="300px" class="float-right" caption="Illustration of the threat model where attackers register false IRR records." attr="(IRRegularities in the Internet Routing Registry, IMC)" attrlink="https://catalog.caida.org/details/paper/2023_irregularities_in_internet_routing_registry/" >}}
 The Internet Routing Registry (IRR), established in the 1990s for routing policy registration and BGP message validation, remains widely used for routing security despite newer alternatives. However, lacking a strict validation standard and facing coordination issues among providers, the IRR is susceptible to inaccuracies. This paper conducts a 1.5-year longitudinal analysis, revealing 34,199 irregular IRR records, with 6,373 potentially suspicious instances, highlighting the ongoing challenge of false registrations and potential security risks in the Internet routing system. ([IRRegularities in the Internet Routing Registry](https://catalog.caida.org/details/paper/2023_irregularities_in_internet_routing_registry/), IMC)
 
 #### Classifying BGP Communities
+@@move to MSRI
 {{< figure src="/about/annualreports/2023/images/2023_coarse_grained_inference_bgp.png" width="300px" class="float-right" caption="@@@" attr="(Coarse-grained Inference of BGP Community Intent, IMC)" attrlink="https://catalog.caida.org/details/paper/2023_coarse_grained_inference_bgp/" >}}
 We explored BGP Communities, which serve as a vital signaling mechanism within BGP routers. These communities play a crucial role in enhancing scalability and automating processes within expansive networks. By grasping the concept of communities, one gains insight into the intricacies of Internet routing dynamics. However, the meanings behind these communities are often undisclosed, necessitating inference.
 As a first step toward automating the inference of BGP community meanings, we formulated an algorithm capable of distinguishing the two coarse-grained community categories discerning two primary community categories: 'information' and 'action'. Our algorithm demonstrated a remarkable accuracy rate of 96%, thereby enhancing the precision of existing methodologies in this domain. We presented our work at the Internet Measurement Conference (IMC) in October, where our research received recognition as runners-up for the best paper award. As part of our commitment to fostering community-driven progress, we have made our code and data openly accessible.([Coarse-grained Inference of BGP Community Intent](https://catalog.caida.org/details/paper/2023_coarse_grained_inference_bgp/), IMC)
 
 #### Utilizing RPKI for Validation of BGP Messages
+@@move to MSRI
 The Border Gateway Protocol (BGP) includes no mechanism to verify the correctness of routing information exchanged between networks. To defend against unauthorized use of address space, the IETF developed the Resource Public Key Infrastructure (RPKI), a cryptographically attested database system that facilitates validation of BGP messages. Networks can use RPKI to check whether the Autonomous System (AS) at the origin of the AS path in a BGP announcement is authorized to originate the IP prefixes being announced. ([Taking the Low Road: How RPKI Invalids Propagate](https://catalog.caida.org/details/paper/2023_taking_low_road/), SIGCOMM Poster)
 
-#### QUINCE
+#### Measuring the Quality of Experience of video streaming and video conferencing applications (QUINCE)
 We are designing and implementing a crowdsourcing-based platform (QUINCE) to measure the QoE of video streaming and video conferencing applications.  We dedicated efforts to seamlessly integrate the QUINCE experiment platform withpublic cloud platforms to automate the deployment of experiments reactively ingeographically diverse cloud regions. Leveraging CloudBank, we explored variousservices offered by Amazon AWS, Microsoft Azure, and Google Cloud Platform.Specifically, we evaluated different software and APIs in terms of ease of use,deployment speed, and functionality for deploying virtual machines (VMs) andDocker images on AWS and Azure to support live video streaming and videoconferencing experiments. These tools enabled us to develop a customized webconsole in QUINCE to monitor the use of cloud resources in real-time. We prototyped crowdsourcing-based video conferencing experiments and are addressing challenges in operationalizing the prototype. We enhanced the QUINCE prototype by introducing more gamification features to boost the intrinsic motivation of subjects. Apart from improving visualization components, we introduced new gamification features. 
 
 
@@ -68,24 +73,28 @@ We are designing and implementing a crowdsourcing-based platform (QUINCE) to mea
 ### Internet Routing and Security
 
 #### Assessing Connectivity Vulnerabilities
+@@move to msri
 {{< figure src="/about/annualreports/2023/images/2023_on_importance_being_as.png" width="300px" class="float-right" caption="Contrasting the calculations for Customer Cone (CC) and AS Hegemony (AH) for an AS topology with provider-to-customer and peer-to-peer relationships." attr="(On the Importance of Being an AS, IMC)" attrlink="https://catalog.caida.org/details/paper/2023_on_importance_being_as/" >}}
 
 Geopolitical events underscore the importance of Internet infrastructure control for economic and defense purposes. To assess countries vulnerable to Internet connectivity issues due to reliance on foreign networks, the study adapts global BGP-based metrics for regional analysis. Overcoming challenges like geolocation and incomplete data, the approach involves downsampling public routing data to individual countries. Case studies on Australia, Japan, Russia, Taiwan, and the United States reveal insights into telecommunications market concentration and interdependence. The researchers plan to share their code, inferences, and datasets for reproducibility. ([On the Importance of Being an AS: An Approach to Country-Level AS Rankings](https://catalog.caida.org/details/paper/2023_on_importance_being_as/), IMC)
 
 #### Improving Routing Security Via Trust Zones
+@@move to msri
 We introduce two related concepts that we believe can lead to improved security of the global Internet routing system (the Border Gateway Protocol or BGP). BGP suffers from a well-documented vulnerability: a network (termed an Autonomous System or AS) can falsely announce that it hosts or is on the path to a block of addresses that it does not in fact have the authority to announce. Routers that accept a false route announcement – known as a route hijack – will deflect traffic intended for addresses in that block to a rogue AS. ([A path forward: Improving Internet routing security by enabling trust zones](https://catalog.caida.org/details/paper/2023_a_path_forward/), FCC)
 
 #### Assessing Physical Risks to Internet Access Networks
+@@move to avoid
 Regional access networks, crucial for connecting users to the Internet, face vulnerabilities due to economic and architectural constraints, leaving them susceptible to targeted physical attacks. The study combines novel techniques for analyzing access-network infrastructure with large-scale outage measurements to demonstrate the feasibility and quantify potential impacts of such attacks. The research provides insights into the physical attack surfaces and resiliency limits of regional access networks, suggesting potential mitigation approaches while acknowledging drawbacks identified by network operators. The empirical evaluation aims to inform risk assessments, operational practices, and stimulate further analyses of this critical infrastructure. ([Access Denied: Assessing Physical Risks to Internet Access Networks](https://catalog.caida.org/details/paper/2023_access_denied/), USENIX Security Symposium)
 <!--- Potentially useful visuals in this paper --->
 
-#### AVOID
+#### utomated Verification Of Internet Data-paths for 6G (AVOID)
 <!-- add avoid image -->
 In collaboration with Alexander Marder now at Johns Hopkins University, CAIDA is prototyping an automated system that helps Department of Defense (DOD) operators who want to communicate with 5G devices by avoiding nation-state adversaries and moving communications to safe paths. The design is user-based, so it will be the result of interviews with end-users and stakeholders.  This is called the AVOID system: Automated Verification Of Internet Data-paths. In 2023, we  spent considerable effort obtaining preliminary results to demonstrate the power of
 our design. We focused primarily on designing, training, and testing a base station vendor
 classifier, as well as demonstrating the power of our geolocation-based approach. We filed a provisional patent to protect new intellectual property developed under this project.
 
 #### Cloud-Native Internet Measurement Pipeline
+@@kc -- is it CLOUD(??)
 With Alexander Marder at Johns Hopkins University, we developed a software pipeline to deploy measurements on public cloud platforms at scale. The pipeline integrates modern software stacks, enabling us to provision multiple measurement virtual machines (VMs) across cloud platforms and securely collect measurement results. Leveraging this pipeline, we conducted large-scale traceroute measurements to geolocate 2.5 million IP addresses discovered by CAIDA’s Macroscopic InternetTopology Data Kit (ITDK) from VMs we set up in 85 data centers from three major cloud providers (Amazon AWS, Google GCP, and Microsoft Azure). We inferred the geolocation of the IPs using [hoiho](https://catalog.caida.org/dataset/hoiho), which analyzes geolocation hints in hostnames and cross-validates with network latency. Conducting measurements from diverse vantage points could improve the accuracy of the geolocation inference. 
 
 <!-- save for 2024
@@ -97,17 +106,21 @@ Using speed test server information that CAIDA has been collecting for three yea
 ### Legal and Regulatory Impact
 
 #### Elaborating on Security Issues Discussed by the FCC
+@@move to MSRI
 On January 20, 2022, a meeting took place between David Clark (CSAIL/MIT), KC Claffy, Mr. Ken Carlberg, and Padma Krishnaswamy from the FCC to discuss the Notice of Inquiry on Secure Internet Routing. The meeting addressed various comments reflecting the widespread understanding of the severity of routing security issues. While U.S. government agencies advocate FCC action, some emphasize the challenges of regulation, the government's adoption of security practices, and the importance of non-regulatory approaches. The discussion highlighted the increasing tension on the topic amid prolonged multistakeholder efforts and the growing risk of BGP hijacks affecting even major corporations. The researchers provided additional perspectives based on their academic expertise in Internet architecture and routing. ([Notice of Ex Parte Meeting, Secure Internet Routing](https://catalog.caida.org/details/paper/2023_notice_of_ex_parte_meeting_fcc_22_90/), FCC)
 
 #### Reporting on the EU Digital Services Act
+@@move to MSRI
 The EU Digital Services Act (DSA) is intended to reduce the risks and challenges for individual recipients of Digital Information services, in particular what are described as intermediate services. The regulation imposes specific obligations on platforms that allow online trading, and expanded obligations on very large online platforms and very large search engines. A second goal of the DSA is to provide a single, harmonized regulatory framework for the Union, and to preempt the creation of divergent regulatory structures by individual States. The regulation states that Member States should not adopt or maintain additional national requirements relating to the matters falling within the scope of this Regulation.([The EU Digital Services Act and Academic Research - Technical Report](https://catalog.caida.org/details/paper/2023_eu_digital_services_act/), CAIDA)
 
 [---Data and Ontology Mapping]: # (---------------------------------------------)
 ### Data and Ontology Mapping
 
 #### Mapping Ontologies onto Dataset Schemas
-The goal of this proposal, Annotated Schema (AS), is to provide a limited ontology of annotations for dataset metadata that inform a prospective user of the classes, properties, and identifiers contained in the data. The intended audience of this document includes Data Curators (annotators) who want to create meaningful dataset descriptions, and those searching for data sets in our catalog. ([Annotated Schema: Mapping Ontologies onto Dataset Schemas](https://catalog.caida.org/details/paper/2023_annotated_schema/), CAIDA)
-
+@@Move to MSRI
+We continued working on “CAIDA Data Schema”, a unified relational descriptive representation of the data contained in the dataset. We started using data “categories” that allow for classification of objects and properties. The goal of the Annotated Schema is to provide a high-level unified structure for comparing, joining, and understanding datasets from different sources and formats.  In pursuit of this goal, the Annotated Schema provides a set of canonical object categories, properties, and namespaces. This will enable doing semantic search/queries on databases. The latest version of the schema can be found at  ([Annotated Schema: Mapping Ontologies onto Dataset Schemas](https://catalog.caida.org/details/paper/2023_annotated_schema/), CAIDA)
+ The intended audience of this document includes Data Curators (annotators) who want to create meaningful dataset descriptions, and those searching for data sets in our catalog. 
+## STARNOVA
 
 [MEASINFRA section]: # (==================================================================================================)
 ## Measurement Infrastructure and Data Sharing Projects
@@ -116,14 +129,15 @@ The goal of this proposal, Annotated Schema (AS), is to provide a limited ontolo
 {{< figure src="/funding/msri-gmi3s/gmi3s-structure-overview.png" width="300px" class="float-right" caption="Overview of the GMI3S structure" >}}
 
  
-We have been continuing our efforts to enhance our Internet measurements, data analytics, and data sharing platforms and pipelines. These improvements aim to streamline the collection and curation of infrastructure data, making it easier to query, integrate, share, and analyze. Our ongoing work is guided by the framework of the GMI Design Project (Designing a Global Measurement Infrastructure to Improve Internet Security, or GMI3S).  The objective of the GMI project is to design and prototype a new generation of measurement infrastructure for the Internet. 
+We have been continuing our efforts to enhance our Internet measurements, data analytics, and data-sharing platforms and pipelines. These improvements aim to streamline the collection and curation of infrastructure data, making it easier to query, integrate, share, and analyze. Our ongoing work is guided by the framework of the GMI Design Project (Designing a Global Measurement Infrastructure to Improve Internet Security, or GMI3S).  The objective of the GMI project is to design and prototype a new generation of measurement infrastructure for the Internet. 
 Specifically, our attention is on security vulnerabilities (and consequential harms) that arise in the packet carriage layer of the Internet.
 We focus on the following system components:
  (1) The addressing architecture of the Internet, and systems to support address allocation,
 management, and use; (2) The global routing protocol of the Internet, the Border Gateway Protocol, or BGP; (3) The Domain Name System, or DNS, which maps from high-level names to IP addresses; (4) The Certificate Authority system, which manages encryption keys for applications.
 ([GMI3S Design Project website](https://gmi3s.caida.org/))
+We organize our work into four tasks. Our first task is to design, prototype, test and evaluate a new highly distributed network measurement platform capable of capturing several types of data relevant to security research, as well as hosting new vetted experiments. This task requires consideration of both dedicated hardware and virtualized software deployments, in a modular architecture that allows hosting sites to opt in to measurements as policy allows. Our second task includes many facets of data management: meta-data ontologies; standardizing data exchange formats; tools to support data curation and documentation; and techniques for efficient data sharing, discovery, use, and dissemination. Our third task focuses on community-oriented infrastructure that enables use of the data for a broad set of cybersecurity research and beyond. This task tackles issues with sensitive data that raise privacy or corporate concerns. One subtask is to bridge the current gap between emerging data disclosure control technologies and measurement and security practitioners. We are exploring the relevance of computer science advances such as differential privacy and secure multi-party computation, to current and emerging cybersecurity research priorities. We are designing a set of legal enablers, e.g., normalization of data-sharing agreements, and socializing these among our partners and the larger community as part of our fourth task, outreach. Task four includes workshops, curriculum development, and STEM/cybersecurity work force training. To prototype our design, we are working with the community of Research and Educations (R&E) networks, which interconnect campuses and research centers across the globe as well as industry and governmental organizations. 
 Below we list the project 2023 progress highlights. 
-
+Task 1 Designing Data Acquisition
 #### Active Measurements
 @@from M24 and M30 reports 
 ##### Archipelago 
@@ -137,11 +151,12 @@ We continued to maintain the [Archipelago (Ark)](/projects/ark/) active measurem
 ##### FANTAIL
 ##### PERISCOPE
 ##### SCAMPER
-##### Geoping
+##### Geoping project
+@@what else
 
 #### BGP Measurements
 @@from M24 and M30 reports
-Include GILL 
+Work with GILLNET
 
 ##### AS Rank 
 AS Rank integrates heterogeneous datasets, including [AS-relationships](https://catalog.caida.org/dataset/as_relationships_serial_1), inferred relationships, customer cones, [AS to organization mapping](https://catalog.caida.org/dataset/as_organizations), [Netacuity geolocation](https://www.digitalelement.com/solutions/location-targeting/netacuity/?utm_campaign=GF_Brand_Search&utm_source=google_c&utm_medium=ppc&utm_content=656665743792&utm_term=e_netacuity&adgroupid=155354887184&gad=1&gclid=CjwKCAjwzJmlBhBBEiwAEJyLu-DqF3-OrdJq_s7Ll5tlQKe8h1uRM3AAiUBxfAgbi6b6PA7y5hv4ixoC3BwQAvD_BwE), and more, to generate a unified and comprehensive perspective of the Internet's Autonomous Systems (ASes). This unified view allows for a better understanding of the relationships, hierarchy, and characteristics of ASes within the global Internet infrastructure. Seeking operator ground truth in our rankings, we worked on an interface to solicit feedback and corrections from the community. We continue to update AS Rank’s inferences with operator ground truth, increasing the accuracy of the presented data.  
@@ -154,7 +169,8 @@ We continued updating the as2org data set every quarter. <span class="old">In ad
 BGP metadata and BGP2GO to facilitate access and sharing of relevant MRT files.  
 In the context of CAIDA Science Gateway, we generate monthly metadata databases (BGPMeta) out of BGP data that contain information about where to find prefixes, ASNs, and communities. BGP2GO is an application for the metadata. It allows a potential consumer of BGP data to select, download and process only the relevant data.
 
-In 2023, there have been various extensions to / activities around BGP2GO. BGP2GO and BGPMeta run stable and uninterrupted since more than a year, while new data is being ingested every 15 minutes. It is being used by people from industry (e.g., Fastly) as well as researchers in the community. We built website peer stats to inform about the update volume coming from routeviews collector peers. It makes use of the metadata database (BGPmeta).  We created a production version that sits behind keycloak (https://bgp2go.caida.org/) such that only authorized users can access BGP2GO. We worked on improving the existing web interface by porting it to React. We generated a database for allocation statistics taken from the five RIRs (Regional Internet Registries), i.e., ARIN, RIPE, APNIC, AFRINIC, and LACNIC. This database informs about when a prefix or ASN have been allocated or assigned to another Internet Registry or directly to the customer. This database is being updated on a daily basis and will be integrated into BGP2GO soon. We also performed preliminary analysis of public open-intel DNS data to show the feasability of integrating prefix activity in DNS with BGPMeta/BGP2GO.
+In 2023, there have been various extensions to / activities around BGP2GO. BGP2GO and BGPMeta run stable and uninterrupted since more than a year, while new data is being ingested every 15 minutes. It is being used by people from industry (e.g., Fastly) as well as researchers in the community. We built website peer stats to inform about the update volume coming from routeviews collector peers. It makes use of the metadata database (BGPmeta).  We created a production version that sits behind keycloak (https://bgp2go.caida.org/) such that only authorized users can access BGP2GO. We worked on improving the existing web interface by porting it to React. We generated a database for allocation statistics taken from the five RIRs (Regional Internet Registries), i.e., ARIN, RIPE, APNIC, AFRINIC, and LACNIC. This database informs about when a prefix or ASN have been allocated or assigned to another Internet Registry or directly to the customer. This database is being updated on a daily basis and will be integrated into BGP2GO soon. 
+We also performed a preliminary analysis of public open-intel DNS data to show the feasability of integrating prefix activity in DNS with BGPMeta/BGP2GO.
 
 ##### BGP Communities
 
@@ -167,11 +183,11 @@ We continued limited support for the BGPStream broker, which is seeing growing u
 ##### DNS Zone Database (DZDB) platform for querying DNS TLD zone files
 CAIDA's DNS Zone Database (DZDB) is a platform providing access to time-series data derived from current and historical zone files provided by generic Top-Level Domains (gTLDs) participating in the Central Zone Data Service (CZDS) or directly by TLD Registry Operators in compliance with license agreements. We continued working with collaborator Ian Foster to transition the DZDB platform to CAIDA infrastructure and updated the import code to run on our systems. Researchers can query this database for domains, nameservers, IP addresses and more via the [DZDB API](https://dzdb.caida.org/api), whose documentation we significantly expanded.
 @@add from M24&M30 reports
-
 ##### ICANN SSAC work party 
 ##### KINDNS
 ##### FCC --  zones of trust
- 
+##### DNS Transparency
+
 #### Facilitating Advances in Network Topology Analysis (FANTAIL)
 @@move to active measurements
 We developed the Facilitating Advances in Network Topology Analysis (FANTAIL) system to facilitate discovery of the full potential value of massive raw Internet end-to-end path measurement data sets, allowing researchers to use high-level queries to perform data processing and analysis tasks on matching traces without owning/operating a cluster, and without learning big data programming. [FANTAIL](/projects/fantail/) is a four-component system: (1) an interactive web interface; (2) an API built on web standards; (3) a full-text search system based on Elasticsearch; and (4) a big data processing system based on Spark.  
@@ -191,6 +207,7 @@ Researchers at CAIDA worked on the geoping pipeline project, developing an algor
 Our ongoing collection of [Macroscopic Internet Topology Data Kits (ITDK)](/catalog/datasets/internet-topology-data-kit/) started in 2010 and now includes 23 Kits. In 2023 we published the 2023-03 ITDK.  These data sets contain router-level topologies generated from the [Ark IPv4 Routed /24 Topology Dataset](https://catalog.caida.org/dataset/ark_ipv4_traceroute).
 
 #### IP Prefix to AS Mapping
+move to BGP section
 One of CAIDA's most frequently requested datasets is its [RouteViews Prefix to AS Mapping Dataset for IPv4 and IPv6](https://www.caida.org/catalog/datasets/routeviews-prefix2as/) dataset. This dataset contains IPv4/IPv6 Prefix-to-Autonomous System (AS) mappings derived from the NSRC RouteViews Project, which gathers BGP updates from hundreds of vantage points around the world. CAIDA uses RouteViews BGP tables dumps (from one collector) to perform a longest-prefix match on observed prefixes, to produce daily snapshots of the Prefix to AS mapping. This daily updated dataset goes back to May 2005. <span class="old">We also did major refactoring, redesign, optimizations, output formatting, and code cleanup in the prefix2as code within BGPView (a BGPstream-based library). </span>
 @@move to BGP Measurements
 @@elena waiting for Ben's comments on "we stopped producing it bcs there were problems with RV rib files, But now we fixed the problem and restarted/backfilled the data and update it daily" 
@@ -216,7 +233,7 @@ Spoofer is a suite of open-source software tools to assess and report on the dep
 
 ##### UCSD Network Telescope
 summary of ARDC report https://ucsdcloud-my.sharepoint.com/:w:/g/personal/eyulaeva_ucsd_edu/EdsYQURC-exFvfkzGjKTXh4Bj2yLdeYrkGmJJ2w-bVhebA?e=NdJUhe
-##### STARNOVA
+
 ##### DDoS paper
 
 
@@ -233,7 +250,10 @@ Monitor
 Year and month (including a link to a graphical display of breakup by protocol, application, and country), Start time of trace (UTC),  Stop time of trace (UTC), Number of IPv4 packets, Number of IPv6 packets,
 Unknown packets (as a fraction of total number of packets), Transmission rate in packets per second,
 Transmission rate in bits per second,, Link load (as fraction of nominal maximum load for a 100 GB link (9.953×109 @@elena to clarify bits/s), Average packet size (bytes) (including a link to a graph of the packet size distribution)
-
+@@ from M24 and M30 reports 
+## Task 2
+## Task 3
+## Task 4
 
 [DATA section]: # (==================================================================================================)
 ## Data Collection Statistics: Topology and Traffic 
@@ -257,7 +277,7 @@ In 2023 CAIDA captured about 1.3 PB of compressed Internet darknet traffic data.
 {{< clear-float both >}}
 
 ### CAIDA Resource Catalog
-
+@@move to MSRI
 {{< figure src="/about/annualreports/2022/images/catalog_schematic.png" width="300px" class="float-right" caption="Schematic representation of the Resource Catalog architecture." >}}
 
 In pursuit of the FAIR (findable, accessible, interoperable, reusable) principles of our scientific data infrastructure mission, we invested significant effort to make our data sets and associated resources more accessible to other researchers. We continued development of the [CAIDA Resource Catalog](https://catalog.caida.org), which provides a unified interface to metadata and relationships between datasets, papers, presentations, media, software,  and recipes (code and  instructions on how to solve various Internet security-related problems using datasets, tools and other objects indexed in catalog).  We added new types of resources (collections and presentations) and new metadata fields to facilitate discovery of resources. We created [collections](https://catalog.caida.org/search?query=types=collection), which are groups of resources by CAIDA topic or project.  We responded to community feedback by adding "suggestions" when searching and including a link to search instructions for [how to search the catalog](https://catalog.caida.org/recipe/how_to_search_the_catalog) under the search bar on all pages.  We created DOIs for all ongoing datasets and will propagate those into the catalog citation.  As the amount of data grew, we also took time to refactor and improve the load time of our search pages.  We created a [feedback page](https://catalog.caida.org/feedback) to solicit feedback on the catalog design or on a specific resource.
